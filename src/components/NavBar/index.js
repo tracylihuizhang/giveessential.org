@@ -56,15 +56,22 @@ export function NavBar() {
         </NavbarBrand>
         <Nav className="mr-auto" navbar style={textStyles}>
           <NavItem>
-            <NavLink href="/about">How does this work?</NavLink>
+            <NavLink href="https://www.giveessential.org/faq">What We Do</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/about-us">Who we are</NavLink>
+            <NavLink href="https://www.giveessential.org/how-can-i-help">How Can I Help?</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/contact">Contact us</NavLink>
+            <NavLink href="https://www.giveessential.org/our-team">Our Team</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://www.giveessential.org/merch">Merch</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://www.giveessential.org/contact">Contact Us</NavLink>
           </NavItem>
         </Nav>
+
         <Nav>
           <NavItem>
             <NavLink href="http://instagram.com/giveessential">
