@@ -23,7 +23,23 @@ const textStyles = {
   fontFamily: "Archivo Narrow, sans-serif",
   fontStyle: "normal",
   fontWeight: "normal",
+  letterSpacing: "0.2rem"
 };
+
+const btnStyle = {
+  backgroundColor: "#F3D04E",
+  color: "#FFF", border: 0,
+  textAlign: "center",
+  borderRadius: ".4em",
+  padding: "1.2em 2.004em",
+  lineHeight: "1.2em",
+  fontWeight: "420",
+  letterSpacing: "0.02em",
+  // fontFamily: "Helvetica Neue",
+  // textTransform: "none",
+  // fontStyle: "normal"
+
+}
 
 export function NavBar() {
   return (
@@ -44,18 +60,11 @@ export function NavBar() {
           </NavItem>
         </Nav>
         <Nav navbar style={{ float: "right", margin: 0 }}>
-          <NavItem style={textStyles}>
-            <NavLink href="/get-help" style={{fontStyle: "italic", fontWeight: 800, color: "#000"}}>Get help</NavLink>
-          </NavItem>
-          <UncontrolledDropdown nav inNavbar style={textStyles}>
-            <DropdownToggle nav caret style={{fontWeight: 800, color: "#FD8E7B"}}>
-              Donate
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem tag={Link} to="/donor-form">Give Items</DropdownItem>
-              <DropdownItem>Be a Patron</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
+          <NavLink>
+            <NavLink href="https://gofundme.com/f/give-essential">
+              <button style={btnStyle}>Donate</button>
+            </NavLink>
+          </NavLink>
         </Nav>
       </Navbar>
     </div>
