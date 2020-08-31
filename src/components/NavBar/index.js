@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 import { LogoPic } from "./styles";
 
 import Logo from "../../assets/images/logo.PNG";
+import LogoWhite from "../../assets/images/logo-white.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -26,10 +27,10 @@ const textStyles = {
 
 export function NavBar() {
   return (
-    <div style={{ boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)" }}>
-      <Navbar color="white" light expand="md">
+    <div style={{ boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)", backgroundColor: "#8CC9BA" }}>
+      <Navbar light expand="md">
         <NavbarBrand href="/">
-          <LogoPic src={Logo} alt="Logo" />
+          <LogoPic src={LogoWhite} alt="Logo" />
         </NavbarBrand>
         <Nav className="mr-auto" navbar style={textStyles}>
           <NavItem>
