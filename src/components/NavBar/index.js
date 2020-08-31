@@ -8,22 +8,29 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
+  DropdownItem
 } from "reactstrap";
 import { Link } from 'react-router-dom';
 import { LogoPic } from "./styles";
+import {Picture} from "../../pages/ContactPage/styles";
 
-import Logo from "../../assets/images/logo.PNG";
+import "../../fonts/Montserrat/Montserrat-Medium.ttf";
+
 import LogoWhite from "../../assets/images/logo-white.png";
+import fbImg from "../../assets/icons/facebook.png";
+import instaImg from "../../assets/icons/instagram.png";
+import twitterImg from "../../assets/icons/twitter.png";
+import linkedinImg from "../../assets/icons/linkedin.png"
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const textStyles = {
-  textTransform: "uppercase",
-  fontFamily: "Archivo Narrow, sans-serif",
+  // textTransform: "uppercase",
+  fontFamily: "Montserrat, Open Sans",
   fontStyle: "normal",
   fontWeight: "normal",
-  letterSpacing: "0.2rem"
+  // letterSpacing: "0.2rem"
 };
 
 const btnStyle = {
@@ -35,10 +42,9 @@ const btnStyle = {
   lineHeight: "1.2em",
   fontWeight: "420",
   letterSpacing: "0.02em",
-  // fontFamily: "Helvetica Neue",
+  fontFamily: "Montserrat",
   // textTransform: "none",
   // fontStyle: "normal"
-
 }
 
 export function NavBar() {
@@ -59,6 +65,31 @@ export function NavBar() {
             <NavLink href="/contact">Contact us</NavLink>
           </NavItem>
         </Nav>
+        <Nav>
+          <NavItem>
+            <NavLink href="http://instagram.com/giveessential">
+              <Picture src={instaImg} alt="Instagram icon"/>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://www.facebook.com/GiveEssential/">
+              <Picture src={fbImg} alt="Facebook icon"/>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://twitter.com/GiveEssential">
+              <Picture src={twitterImg} alt="Twitter icon"/>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://www.linkedin.com/company/give-essential">
+              <Picture src={linkedinImg} alt="Linkedin icon"/>
+            </NavLink>
+          </NavItem>
+        </Nav>
+
+
+
         <Nav navbar style={{ float: "right", margin: 0 }}>
           <NavLink>
             <NavLink href="https://gofundme.com/f/give-essential">
