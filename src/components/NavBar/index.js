@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 import { LogoPic } from "./styles";
 import {Picture} from "../../pages/ContactPage/styles";
 import {MediaIcons} from "./styles";
+import {Icons} from "./styles";
 
 import "../../fonts/Montserrat/Montserrat-Medium.ttf";
 
@@ -32,6 +33,8 @@ const textStyles = {
   fontStyle: "normal",
   fontWeight: "normal",
   color: "#fff",
+  float: "right",
+  margin: "0"
   // letterSpacing: "0.2rem"
 };
 
@@ -49,6 +52,10 @@ const btnStyle = {
   // fontStyle: "normal"
 }
 
+const pageLinks = {
+  color: "#fff"
+}
+
 export function NavBar() {
   return (
     <div style={{ boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)", backgroundColor: "#8CC9BA" }}>
@@ -58,42 +65,41 @@ export function NavBar() {
         </NavbarBrand>
         <Nav className="mr-auto" navbar style={textStyles} >
           <NavItem>
-            <div style={{color: "#ffffff"}}>
-              <NavLink href="https://www.giveessential.org/faq">What We Do</NavLink>
-            </div>
+              <NavLink style={pageLinks} href="https://www.giveessential.org/faq">What We Do</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.giveessential.org/how-can-i-help">How Can I Help?</NavLink>
+            <NavLink style={pageLinks} href="https://www.giveessential.org/how-can-i-help">How Can I Help?</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.giveessential.org/our-team">Our Team</NavLink>
+            <NavLink style={pageLinks} href="https://www.giveessential.org/our-team">Our Team</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.giveessential.org/merch">Merch</NavLink>
+            <NavLink style={pageLinks} href="https://www.giveessential.org/merch">Merch</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.giveessential.org/contact">Contact Us</NavLink>
+            <NavLink style={pageLinks} href="https://www.giveessential.org/contact">Contact Us</NavLink>
           </NavItem>
         </Nav>
 
-        <Nav style={{paddingInline: "0px"}}>
+        <Nav >
           <NavItem>
-            <NavLink href="http://instagram.com/giveessential">
+            <NavLink
+                style={{}} href="http://instagram.com/giveessential">
               <MediaIcons src={instaImg} alt="Instagram icon" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.facebook.com/GiveEssential/">
+            <NavLink className={Icons} href="https://www.facebook.com/GiveEssential/">
               <MediaIcons src={fbImg} alt="Facebook icon"/>
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://twitter.com/GiveEssential">
+            <NavLink className={Icons} href="https://twitter.com/GiveEssential">
               <MediaIcons src={twitterImg} alt="Twitter icon"/>
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://www.linkedin.com/company/give-essential">
+            <NavLink className={Icons} href="https://www.linkedin.com/company/give-essential">
               <MediaIcons src={linkedinImg} alt="Linkedin icon"/>
             </NavLink>
           </NavItem>
