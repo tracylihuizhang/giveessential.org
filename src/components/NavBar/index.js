@@ -13,6 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 import { LogoPic } from "./styles";
 import {Picture} from "../../pages/ContactPage/styles";
+import {MediaIcons} from "./styles";
 
 import "../../fonts/Montserrat/Montserrat-Medium.ttf";
 
@@ -30,6 +31,7 @@ const textStyles = {
   fontFamily: "Montserrat, Open Sans",
   fontStyle: "normal",
   fontWeight: "normal",
+  color: "#fff",
   // letterSpacing: "0.2rem"
 };
 
@@ -54,9 +56,11 @@ export function NavBar() {
         <NavbarBrand href="/">
           <LogoPic src={LogoWhite} alt="Logo" />
         </NavbarBrand>
-        <Nav className="mr-auto" navbar style={textStyles}>
+        <Nav className="mr-auto" navbar style={textStyles} >
           <NavItem>
-            <NavLink href="https://www.giveessential.org/faq">What We Do</NavLink>
+            <div style={{color: "#ffffff"}}>
+              <NavLink href="https://www.giveessential.org/faq">What We Do</NavLink>
+            </div>
           </NavItem>
           <NavItem>
             <NavLink href="https://www.giveessential.org/how-can-i-help">How Can I Help?</NavLink>
@@ -72,25 +76,25 @@ export function NavBar() {
           </NavItem>
         </Nav>
 
-        <Nav>
+        <Nav style={{paddingInline: "0px"}}>
           <NavItem>
             <NavLink href="http://instagram.com/giveessential">
-              <Picture src={instaImg} alt="Instagram icon"/>
+              <MediaIcons src={instaImg} alt="Instagram icon" />
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="https://www.facebook.com/GiveEssential/">
-              <Picture src={fbImg} alt="Facebook icon"/>
+              <MediaIcons src={fbImg} alt="Facebook icon"/>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="https://twitter.com/GiveEssential">
-              <Picture src={twitterImg} alt="Twitter icon"/>
+              <MediaIcons src={twitterImg} alt="Twitter icon"/>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="https://www.linkedin.com/company/give-essential">
-              <Picture src={linkedinImg} alt="Linkedin icon"/>
+              <MediaIcons src={linkedinImg} alt="Linkedin icon"/>
             </NavLink>
           </NavItem>
         </Nav>

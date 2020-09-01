@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const LogoPic = styled.img`
-  height: 22vh;
+  max-height: 50px;
+  max-width: 100%;
   width: auto;
 `;
 
@@ -11,4 +12,14 @@ export const LogoPic = styled.img`
 //   fontStyle: "normal",
 //   fontWeight: "normal",
 // `;
+
+export const MediaIcons = styled.img `
+  max-width: 1.4vw;
+  // height: auto;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  display: inline-block;
+`
 
