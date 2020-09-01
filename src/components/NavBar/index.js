@@ -84,22 +84,22 @@ export function NavBar() {
         <Nav >
           <NavItem>
             <NavLink
-                style={{}} href="http://instagram.com/giveessential">
+                style={{padding: "0.5em"}} href="http://instagram.com/giveessential">
               <MediaIcons src={instaImg} alt="Instagram icon" />
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={Icons} href="https://www.facebook.com/GiveEssential/">
+            <NavLink style={{padding: "0.5em"}} href="https://www.facebook.com/GiveEssential/">
               <MediaIcons src={fbImg} alt="Facebook icon"/>
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={Icons} href="https://twitter.com/GiveEssential">
+            <NavLink style={{padding: "0.5em"}} href="https://twitter.com/GiveEssential">
               <MediaIcons src={twitterImg} alt="Twitter icon"/>
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className={Icons} href="https://www.linkedin.com/company/give-essential">
+            <NavLink style={{padding: "0.5em"}} href="https://www.linkedin.com/company/give-essential">
               <MediaIcons src={linkedinImg} alt="Linkedin icon"/>
             </NavLink>
           </NavItem>
