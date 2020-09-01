@@ -11,10 +11,7 @@ import {
   DropdownItem
 } from "reactstrap";
 import { Link } from 'react-router-dom';
-import { LogoPic } from "./styles";
-import {Picture} from "../../pages/ContactPage/styles";
-import {MediaIcons} from "./styles";
-import {Icons} from "./styles";
+import { LogoPic, MediaIcons } from "./styles";
 
 import "../../fonts/Montserrat/Montserrat-Medium.ttf";
 
@@ -28,14 +25,10 @@ import linkedinImg from "../../assets/icons/linkedin.png"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const textStyles = {
-  // textTransform: "uppercase",
   fontFamily: "Montserrat, Open Sans",
   fontStyle: "normal",
   fontWeight: "normal",
-  color: "#fff",
-  float: "right",
-  margin: "0"
-  // letterSpacing: "0.2rem"
+  paddingRight: "0.5em"
 };
 
 const btnStyle = {
@@ -48,8 +41,6 @@ const btnStyle = {
   fontWeight: "420",
   letterSpacing: "0.02em",
   fontFamily: "Montserrat",
-  // textTransform: "none",
-  // fontStyle: "normal"
 }
 
 const pageLinks = {
@@ -63,7 +54,7 @@ export function NavBar() {
         <NavbarBrand href="/">
           <LogoPic src={LogoWhite} alt="Logo" />
         </NavbarBrand>
-        <Nav className="mr-auto" navbar style={textStyles} >
+        <Nav className="ml-auto" navbar style={textStyles}>
           <NavItem>
               <NavLink style={pageLinks} href="https://www.giveessential.org/faq">What We Do</NavLink>
           </NavItem>
@@ -81,10 +72,9 @@ export function NavBar() {
           </NavItem>
         </Nav>
 
-        <Nav >
+        <Nav>
           <NavItem>
-            <NavLink
-                style={{padding: "0.5em"}} href="http://instagram.com/giveessential">
+            <NavLink style={{padding: "0.5em"}} href="http://instagram.com/giveessential">
               <MediaIcons src={instaImg} alt="Instagram icon" />
             </NavLink>
           </NavItem>
@@ -104,8 +94,6 @@ export function NavBar() {
             </NavLink>
           </NavItem>
         </Nav>
-
-
 
         <Nav navbar style={{ float: "right", margin: 0 }}>
           <NavLink>
