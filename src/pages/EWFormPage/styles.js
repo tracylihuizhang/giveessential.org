@@ -94,5 +94,5 @@ export const ButtonText = styled.h1`
   margin-top: 8px;
   width: 55vw;
   text-align: center;
-  color: ${(props) => (props.disabled ? "#8CC9BA" : "#ffffff")};
+  color: ${(props) => (props.disabled ? "#8cc9ba" : "#ffffff")};
 `;

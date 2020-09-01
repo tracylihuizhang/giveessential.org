@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import {useMediaQuery} from "react-responsive";
 import {
   Screen,
   CenteredFlex,
@@ -92,7 +93,6 @@ function useCurrentWidth() {
 
   return width;
 }
-
 function useCurrentHeight() {
   let [height, setHeight] = useState(getHeight());
 
@@ -119,6 +119,19 @@ function useCurrentHeight() {
 
   return height;
 }
+
+// const deviceDetection = () => {
+//   if (useCurrentHeight() < useCurrentWidth()) {
+//     return useCurrentHeight()
+//   } else if(useCurrentWidth() < 380) {
+//     return "is mobile"
+//   } else if(useCurrentWidth() < 780) {
+//     return "is ipad"
+//   } else {
+//     return "is desktop"
+//   }
+// }
+// deviceDetection();
 
 export default function EssentialWorkerFormPage(props) {
   const [valueState, setValues] = useState([]);
@@ -151,6 +164,17 @@ export default function EssentialWorkerFormPage(props) {
   let width = useCurrentWidth();
   let height = useCurrentHeight();
 
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1224px)'
+  })
+  const isBigScreen = useMediaQuery({ query: '(min-device-width: 1824px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isTabletOrMobileDevice = useMediaQuery({
+    query: '(max-device-width: 1224px)'
+  })
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
   const renderStep = () => {
     switch (currentStep) {
       case 0:
@@ -160,6 +184,17 @@ export default function EssentialWorkerFormPage(props) {
               <div>
                 {width} {height}
                 {/*{window.innerHeight} {window.innerWidth}*/}
+              </div>
+              <div>
+                <h1>Device Test!</h1>
+                {isDesktopOrLaptop && <>
+                  <p>You are a desktop or laptop</p>
+                  {isBigScreen && <p>You also have a huge screen</p>}
+                  {isTabletOrMobile && <p>You are sized like a tablet or mobile phone though</p>}
+                </>}
+                {isTabletOrMobileDevice && <p>You are a tablet or mobile phone</p>}
+                <p>Your are in {isPortrait ? 'portrait' : 'landscape'} orientation</p>
+                {isRetina && <p>You are retina</p>}
               </div>
               <Header>Essential Worker Form</Header>
               <Subtitle>The following questions ask about which items you need. 
